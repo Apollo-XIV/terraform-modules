@@ -50,3 +50,9 @@ variable "enable_dynamodb" {
 output "role_arn" {
   value = local.role_arn
 }
+
+output "bucket" {
+  value = local.bucket_name
+}
+
+
