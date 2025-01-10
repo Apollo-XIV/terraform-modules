@@ -1,7 +1,7 @@
 #  a new AWS DynamoDB table resource 
 resource "aws_dynamodb_table" "locking" {
-  for_each = var.enable_dynamodb ? toset(var.environments) : toset([])
-  name     = "${var.prefix}-${each.key}-locktable"
+  count = var.enable_dynamodb ? 1 : 0
+  name  = "${var.prefix}-${each.key}-locktable"
 
   hash_key       = "LockID"
   read_capacity  = 20

@@ -4,11 +4,6 @@ variable "prefix" {
   description = "string used to prefix resource names and identify the project a resource belongs to"
 }
 
-variable "environments" {
-  type        = list(string)
-  description = "A list of possible environments"
-}
-
 variable "approved_arns" {
   type = list(string)
 }
