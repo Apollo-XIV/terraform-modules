@@ -24,7 +24,7 @@ resource "aws_dynamodb_table" "locking" {
 
   # tags for the DynamoDB table for better organization
   tags = {
-    Name = "${var.prefix}-${each.key}-locktable"
+    Name = "${var.prefix}-locktable"
   }
 
   # lifecycle {
