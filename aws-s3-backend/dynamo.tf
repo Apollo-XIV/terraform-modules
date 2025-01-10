@@ -1,7 +1,7 @@
 #  a new AWS DynamoDB table resource 
 resource "aws_dynamodb_table" "locking" {
   count = var.enable_dynamodb ? 1 : 0
-  name  = "${var.prefix}-${each.key}-locktable"
+  name  = "${var.prefix}-locktable"
 
   hash_key       = "LockID"
   read_capacity  = 20
