@@ -25,8 +25,3 @@ output "bucket" {
 output "lock_tables" {
   value = { for k, v in aws_dynamodb_table.locking : k => v.arn }
 }
-
-output "role_arn" {
-  value = aws_iam_role.iac_role.arn
-}
-
