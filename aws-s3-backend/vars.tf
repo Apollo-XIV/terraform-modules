@@ -23,5 +23,5 @@ output "bucket" {
 }
 
 output "lock_table" {
-  value = aws_dynamodb_table.locking.arn
+  value = try(aws_dynamodb_table.locking[0].arn, "disabled")
 }
