@@ -22,6 +22,6 @@ output "bucket" {
   value = aws_s3_bucket.state.bucket
 }
 
-output "lock_tables" {
-  value = { for k, v in aws_dynamodb_table.locking : k => v.arn }
+output "lock_table" {
+  value = aws_dynamodb_table.locking.arn
 }
