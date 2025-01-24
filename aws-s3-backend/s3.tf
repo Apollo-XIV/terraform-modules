@@ -5,6 +5,9 @@ resource "aws_s3_bucket" "state" {
   # lifecycle {
   #   prevent_destroy = true
   # }
+  tags = {
+    Name = "${var.prefix}-state"
+  }
 }
 # trig
 
